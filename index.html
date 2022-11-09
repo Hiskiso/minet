@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='assets/style.css'>
+    <title>Min net</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container" id='container'>
+            <div class="block__game" id='block_game'>
+                <h1 class='block__game__title'>Для начала игры - нажмите <span style='color:#4986f5'>играть</span></h1>
+            </div>
+        </div>
+        <div class="play__area">
+            <div class="play">
+                <input type="number"  id='bombs' placeholder="Введите количество бомб" class="ipt__mines">
+                <input type="number"  id='amount' placeholder="Введите ставку от 10" class="ipt__amonut">
+                <button id='start' class='btn__mines'>Играть</button>
+                <!-- <span class='steps' id="chance"></span> -->
+                <span class='steps' id="step"></span>
+                <button class="btn__mines none" style='margin-bottom:10px' id="take">Забрать</button>
+            </div>
+            <div class="profile">
+                <span class='profile__balance' id="profile_balance">Ваш баланс :</span>
+            </div>
+        </div>
+        <div class="failscreen" id='failscreen'>
+            <div class='failscreen__text'>
+                <span>Вы проиграли</span>
+                <button onClick="restart();" class='restart'>Начать заново</button>
+            </div>
+        </div>
+    </div>
+    <script src='assets/index.js'></script>
+</body>
+
+</html>
