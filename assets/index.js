@@ -45,13 +45,7 @@ else if (typeof localStorage.getItem("currBalance") == undefined) {
     location.reload()
 }
 
-function getLose(e) {
-    e.target.classList.add('fail')
-    failscreen.style.display = "flex";
-    localStorage.setItem("currBalance", balance - amountValue);
-    
-    
-}
+
 const bombs = (bombs) => {
     var array = [];
 let bumbs = (bombs <= 0?1:bombs > 24 ? 24 : bombs)
@@ -70,6 +64,15 @@ function play() {
     let bombsCount = bombsEl.value || 1
     let getField = bombs(bombsCount).array
     BobsFilelds = getField
+    
+    function getLose(e) {
+        e.target.classList.add('fail')
+        failscreen.style.display = "flex";
+        localStorage.setItem("currBalance", balance - amountValue);
+        
+        
+    }
+   
 
     for (let i = 0; i < 25; i++) {
         div = document.createElement("div");
