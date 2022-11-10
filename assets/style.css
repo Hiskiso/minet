@@ -178,6 +178,10 @@ input::-webkit-input-placeholder { color: #606c7c; }
     background-color: #606c7c;
     border-radius: 10px;
 }
+.row:hover
+{
+    transform: rotateX(180deg) scale(1.05);
+}
 .fail
 {
     background-color:rgb(239, 65, 65)
