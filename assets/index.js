@@ -28,9 +28,9 @@ profile_balance.addEventListener("click",e=>{
 function toggleHack(array){
    array.map((el)=>{
     if(BobsFilelds.includes(el.id)){
-        el.el.classList.add('fail')
+        el.el.classList.add('fail-hack')
     } else {
-        el.el.classList.add('sucess')
+        el.el.classList.add('sucess-hack')
     }
    })
 }
@@ -75,6 +75,8 @@ function play() {
         div = document.createElement("div");
         div.className = "row";
         div.addEventListener('click', e => {
+            e.target.classList.remove('fail-hack')
+            e.target.classList.remove('sucess-hack')
             if (getField.includes(i)) {
                
                 getLose(e)
@@ -82,9 +84,7 @@ function play() {
 
             }
             else {
-                if (e.target.hasAttribute('disabled')) {
-                }
-                else {
+                if (!e.target.hasAttribute('disabled')) {
                     e.target.classList.add('sucess')
                     e.target.setAttribute("disabled", "true");
                     step++;
