@@ -54,7 +54,7 @@ const bombs = (bombs) => {
     var array = [];
 let bumbs = (bombs <= 0?1:bombs > 24 ? 24 : bombs)
     for (let i = 0; i < bumbs; i++) {
-        var cell = Math.floor(Math.random() * (25 - 1)) + 1;
+        var cell = Math.floor(Math.random() * (25 - 0)) + 0;
 
         if (!array.includes(cell)) {
             array.push(cell)
