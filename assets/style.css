@@ -72,7 +72,7 @@ button:disabled{
 .ipt__mines
 {
     margin: 0px;
-    padding: 15px 20px 15px 20px;
+    /* padding: 15px 20px 15px 20px; */
     font-size: 12.5px;
     border:0px;
     position: relative;
