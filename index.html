@@ -18,8 +18,10 @@
         </div>
         <div class="play__area">
             <div class="play">
-                <input type="number"  id='bombs' placeholder="Введите количество бомб" class="ipt__mines">
-                <input type="number"  id='amount' placeholder="Введите ставку от 10" class="ipt__amonut">
+                <input type="range" min="2" max="24" step="1" value="2" id='bombs' oninput="this.nextElementSibling.value = this.value" placeholder="Введите количество бомб" class="ipt__mines">
+                <output></output>
+                <input type="range" min="10" value="10" max="1000" id='amount' oninput="this.nextElementSibling.value = this.value" placeholder="Введите ставку от 10" class="ipt__amonut">
+                <output></output>
                 <button id='start' class='btn__mines'>Играть</button>
                 <!-- <span class='steps' id="chance"></span> -->
                 <span class='steps' id="step"></span>

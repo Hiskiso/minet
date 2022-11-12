@@ -14,7 +14,7 @@ let BobsFilelds = []
 const keff = [1.14, 1.30, 1.49, 1.73, 2.02, 2.37, 2.82, 3.38, 4.11, 5.05, 6.32, 8.04, 10.45, 13.94, 19.17, 27.38, 41.07, 65, 71, 115, 230, 575, 2300]
 let balance = localStorage.getItem("currBalance");
 balance = Number(balance);
-
+amount.max = balance
 let isHack = false 
 let clicks = 0
 profile_balance.addEventListener("click",e=>{
@@ -36,11 +36,15 @@ function toggleHack(array){
 }
 
 profile_balance.innerText = "Ваш баланс : " + localStorage.getItem("currBalance")
-if (localStorage.getItem("currBalance") == undefined || localStorage.getItem("currBalance") < 10) {
+if (localStorage.getItem("currBalance") == undefined || localStorage.getItem("currBalance") < 10 ) {
     localStorage.setItem("currBalance", 1000);
     location.reload()
 }
 else if (typeof localStorage.getItem("currBalance") == undefined) {
+    localStorage.setItem("currBalance", 1000);
+    location.reload()
+}
+else if (localStorage.getItem("currBalance") == "NaN") {
     localStorage.setItem("currBalance", 1000);
     location.reload()
 }
